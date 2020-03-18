@@ -1,0 +1,72 @@
+import React,{Component} from 'react';
+import {StyleSheet,View,Text,TextInput,TouchableOpacity} from 'react-native';
+
+export default class App extends Component
+{
+  render()
+  {
+    return(
+      <View style={styles.cotainer}>
+      <View style={styles.TextContainer}>
+        <Text style={styles.bigBlue}>What trusted contact are we adding to abc's account</Text>
+      </View>
+      <TextInput style={styles.input} placeholder="First Name"/>
+      <TextInput style={styles.input} placeholder="Last Name"/>
+      <TextInput style={styles.input} placeholder="Contact Number" keyboardType='numeric'/>
+      <TextInput style={styles.input} placeholder="Email ID"/>
+      <TouchableOpacity style={styles.btn}>
+        <Text style={styles.btnText}>Continue</Text>
+      </TouchableOpacity>
+    </View>
+    )
+  }
+}
+
+const styles = StyleSheet.create(
+  {
+    cotainer:
+    {
+      flex:1,
+      alignItems:'center',
+      justifyContent:'center',
+      backgroundColor:'#fff'
+    },
+    input:
+    {
+      backgroundColor:'#eee',
+      height:40,
+      width:'80%',
+      margin:3,
+      borderRadius:10
+    },
+    bigBlue:
+    {
+      color:'#341f97',
+      fontSize:25,
+    },
+    TextContainer:
+    {
+      marginRight:20,
+      marginLeft:20,
+      alignItems:"center",
+      justifyContent:'center',
+      marginBottom:30
+    },
+    btn:
+    {
+      backgroundColor:'#0abde3',
+      borderRadius:30,
+      height:40,
+      width:'70%',
+      alignItems:'center',
+      justifyContent:'center',
+      marginTop:20
+    },
+    btnText:
+    {
+      color:'snow',
+      fontSize:20
+    }
+  }
+)
+
